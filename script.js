@@ -347,10 +347,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let hasAnimated = false;
 
+    // Set initial display to show "0" with proper formatting
+    statNumbers.forEach(el => {
+      const prefix = el.getAttribute('data-prefix') || '';
+      const suffix = el.getAttribute('data-suffix') || '';
+      el.textContent = `${prefix}0${suffix}`;
+    });
+
     const observerOptions = {
       root: null,
       rootMargin: '0px',
-      threshold: 0.3
+      threshold: 0.5
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -367,21 +374,25 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function animateAllCounters() {
-    statNumbers.forEach(el => {
+    statNumbers.forEach((el, index) => {
       const target = parseFloat(el.getAttribute('data-target')) || 0;
       const prefix = el.getAttribute('data-prefix') || '';
       const suffix = el.getAttribute('data-suffix') || '';
       const isDecimal = el.getAttribute('data-decimal') === 'true';
-      animateCounter(el, target, prefix, suffix, isDecimal);
+      // Stagger each counter by 150ms
+      setTimeout(() => {
+        animateCounter(el, target, prefix, suffix, isDecimal);
+      }, index * 150);
     });
   }
 
   function animateCounter(el, target, prefix, suffix, isDecimal) {
-    const duration = 2000; // ms
+    const duration = 2200;
+    const scrambleDuration = 400; // initial scramble phase
     let startTime = null;
 
-    function easeOutQuart(t) {
-      return 1 - Math.pow(1 - t, 4);
+    function easeOutExpo(t) {
+      return t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
     }
 
     function formatNumber(num) {
@@ -394,19 +405,36 @@ document.addEventListener('DOMContentLoaded', () => {
       return `${prefix}${formatted}${suffix}`;
     }
 
+    // Add a subtle scale-up effect
+    el.style.transition = 'transform 0.3s ease-out';
+    el.style.transform = 'scale(1.08)';
+
     function step(timestamp) {
       if (!startTime) startTime = timestamp;
       const elapsed = timestamp - startTime;
-      const progress = Math.min(elapsed / duration, 1);
-      const easedProgress = easeOutQuart(progress);
-      const currentValue = easedProgress * target;
 
-      el.textContent = formatNumber(currentValue);
-
-      if (progress < 1) {
+      if (elapsed < scrambleDuration) {
+        // Scramble phase: show rapid random numbers
+        const randomFactor = Math.random() * target * 0.5;
+        el.textContent = formatNumber(randomFactor);
         requestAnimationFrame(step);
       } else {
-        el.textContent = formatNumber(target);
+        // Count-up phase
+        const countElapsed = elapsed - scrambleDuration;
+        const countDuration = duration - scrambleDuration;
+        const progress = Math.min(countElapsed / countDuration, 1);
+        const easedProgress = easeOutExpo(progress);
+        const currentValue = easedProgress * target;
+
+        el.textContent = formatNumber(currentValue);
+
+        if (progress < 1) {
+          requestAnimationFrame(step);
+        } else {
+          el.textContent = formatNumber(target);
+          // Settle scale back to normal
+          el.style.transform = 'scale(1)';
+        }
       }
     }
 
@@ -655,42 +683,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 300);
   }
 
-  /* ----------------------------------------------------------
-     10. TYPING / CURSOR BLINK EFFECT (optional enhancement)
-  ---------------------------------------------------------- */
-  function initCursorBlink() {
-    const heroHeadline = document.querySelector('.hero-title, .hero h1');
-    if (!heroHeadline) return;
-
-    // Only add cursor if one doesn't already exist
-    if (heroHeadline.querySelector('.cursor-blink')) return;
-
-    const cursor = document.createElement('span');
-    cursor.className = 'cursor-blink';
-    cursor.textContent = '|';
-    cursor.style.cssText = `
-      display: inline-block;
-      animation: cursorBlink 1s step-end infinite;
-      margin-left: 2px;
-      font-weight: 100;
-      opacity: 0.7;
-    `;
-
-    heroHeadline.appendChild(cursor);
-
-    // Inject keyframes if not already present
-    if (!document.getElementById('cursor-blink-style')) {
-      const style = document.createElement('style');
-      style.id = 'cursor-blink-style';
-      style.textContent = `
-        @keyframes cursorBlink {
-          0%, 100% { opacity: 0.7; }
-          50%      { opacity: 0; }
-        }
-      `;
-      document.head.appendChild(style);
-    }
-  }
 
   /* ----------------------------------------------------------
      11. DARK / LIGHT THEME TOGGLE
@@ -727,6 +719,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollAnimations();
   initStatsCounter();
   initContactForm();
-  initCursorBlink();
+
   initThemeToggle();
 });
