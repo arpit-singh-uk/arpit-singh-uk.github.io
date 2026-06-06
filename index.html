@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arpit Singh — Business Analyst & Data Analyst | London</title>
+    <meta name="description" content="Arpit Singh is a Business Analyst and Data Analyst based in London. MSc Business Analytics (Distinction) from University of Surrey, currently at HSBC UK. Expert in SQL, Python, Power BI, and statistical modelling.">
+    <meta name="keywords" content="Business Analyst, Data Analyst, London, SQL, Python, Power BI, HSBC, University of Surrey, Analytics, Machine Learning">
+    <meta name="author" content="Arpit Singh">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Arpit Singh — Business Analyst & Data Analyst">
+    <meta property="og:description" content="Turning complex data into clear decisions. MSc Business Analytics (Distinction), HSBC banker, skilled in SQL, Python, Power BI.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/images/hero-portrait.jpeg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ======================== HEADER / NAVIGATION ======================== -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="#hero" class="logo">
+                    <span class="logo-mark">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M8 2L14 14H2L8 2Z" fill="white"/>
+                        </svg>
+                    </span>
+                    <span>Arpit Singh</span>
+                </a>
+
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#hero" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#projects">Portfolio</a></li>
+                    <li><a href="#ucl">Beyond</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#reference">Reference</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light theme">
+                        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                    </button>
+                </div>
+
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#hero">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#projects">Portfolio</a>
+            <a href="#ucl">Beyond</a>
+            <a href="#experience">Experience</a>
+            <a href="#reference">Reference</a>
+            <a href="#contact">Contact</a>
+            <a href="#contact" class="btn-primary" style="text-align:center; margin-top: 16px;">Get in touch</a>
+        </div>
+    </header>
+
+    <!-- ======================== HERO SECTION ======================== -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-badge">
+                        <span class="badge-dot"></span>
+                        Available for work
+                    </div>
+
+                    <h1>Turning complex <span class="accent">data</span> into clear <span class="accent">decisions</span></h1>
+
+                    <p class="hero-subtext">MSc Business Analytics (Distinction) and HSBC banker, using SQL, Python and Power BI to turn data into decisions that move the numbers.</p>
+
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn-primary">View my work</a>
+                        <a href="https://substack.com/@arpitsinghbeniwal" target="_blank" rel="noopener" class="btn-outline">The Analyst's Notebook</a>
+                    </div>
+
+                    <div class="hero-credibility">
+                        <a href="Degree.pdf" target="_blank" rel="noopener" class="chip" style="text-decoration:none; color:inherit; cursor:pointer;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6C5CE7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.1 2.7 2 6 2s6-.9 6-2v-5"/></svg>
+                            MSc Distinction · University of Surrey
+                        </a>
+                        <div class="tool-logos">
+                            <span class="tool-badge">SQL</span>
+                            <span class="tool-badge">Python</span>
+                            <span class="tool-badge">Power BI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual fade-in">
+                    <div class="hero-portrait-wrapper">
+                        <div class="hero-blob"></div>
+                        <img src="assets/images/hero-portrait.jpeg" alt="Arpit Singh — Business Analyst and Data Analyst based in London" class="hero-portrait">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== STATS BAND ======================== -->
+    <section class="stats" id="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item fade-in">
+                    <div class="stat-number" data-target="9800" data-suffix="+">0</div>
+                    <div class="stat-label">Transactions analysed</div>
+                </div>
+                <div class="stat-item fade-in">
+                    <div class="stat-number" data-target="2.26" data-prefix="$" data-suffix="M" data-decimal="true">0</div>
+                    <div class="stat-label">Sales data modelled</div>
+                </div>
+                <div class="stat-item fade-in">
+                    <div class="stat-number" data-target="83.47" data-suffix="%" data-decimal="true">0</div>
+                    <div class="stat-label">Model accuracy achieved</div>
+                </div>
+                <div class="stat-item fade-in">
+                    <div class="stat-number" data-target="113">0</div>
+                    <div class="stat-label">Study participants</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== ABOUT ME ======================== -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text slide-in-left">
+                    <h2>Get to know <span class="accent">me</span></h2>
+
+                    <p>I'm a Business Analytics graduate with Distinction from the University of Surrey, currently working as a Universal Banker in HSBC UK's Wealth & Personal Banking division. I operate daily within a regulated FCA environment, handling fraud assessment, AML verification, and supporting the delivery of financial products and services.</p>
+
+                    <p>Beyond banking, I'm passionate about using data to solve real-world business problems. From analysing 9,800+ retail transactions across four regional markets to uncover performance drivers, to conducting a behavioural analytics study involving 113 participants, I enjoy combining analytical techniques with business context to support better decisions.</p>
+
+                    <p>Currently enrolled in HSBC University's Data & AI Academy alongside the role, developing expertise in data analytics and the application of AI to enhance analytical workflows, insight generation, and data-driven decision-making.</p>
+
+                    <a href="assets/Arpit_Singh_Analyst_CV.pdf" download class="btn-primary" style="margin-top: 16px;">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        Download CV
+                    </a>
+                </div>
+
+                <div class="about-highlights slide-in-right">
+                    <div class="highlight-card">
+                        <div class="highlight-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6C5CE7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.1 2.7 2 6 2s6-.9 6-2v-5"/></svg>
+                        </div>
+                        <h3>Education</h3>
+                        <p>MSc Business Analytics — Distinction<br>University of Surrey, Guildford</p>
+                        <span class="highlight-detail">Operational Analytics 83% · Financial Modelling 80% · Statistics & Econometrics 77% · Machine Learning & AI 75%</span>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6C5CE7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                        </div>
+                        <h3>Current Role</h3>
+                        <p>Universal Banker — Wealth & Personal Banking<br>HSBC UK, London</p>
+                        <span class="highlight-detail">FCA regulated · AML/KYC · Consumer Duty compliance</span>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6C5CE7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                        </div>
+                        <h3>HSBC Data & AI Academy</h3>
+                        <p>Enrolled alongside the role, developing expertise in data analytics and the application of AI to enhance analytical workflows, insight generation, and data-driven decision-making.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== WHAT I DO / SKILLS ======================== -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <div class="skills-content">
+                <div class="skills-list">
+                    <div class="skill-item fade-in">
+                        <span class="skill-number">01</span>
+                        <div class="skill-details">
+                            <h3>Data Analysis & Diagnostics</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag">SQL (Window Functions, CTEs)</span>
+                                <span class="skill-tag">Python (Pandas, NumPy)</span>
+                                <span class="skill-tag">Exploratory Data Analysis</span>
+                            </div>
+                        </div>
+                        <a href="#projects" class="arrow-btn" data-skill-project="1" aria-label="See Retail Sales Analytics project">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                        </a>
+                    </div>
+
+                    <div class="skill-item fade-in">
+                        <span class="skill-number">02</span>
+                        <div class="skill-details">
+                            <h3>BI & Visualisation</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Power BI</span>
+                                <span class="skill-tag">DAX & Power Query</span>
+                                <span class="skill-tag">Excel (Advanced)</span>
+                                <span class="skill-tag">Dashboarding & KPI Tracking</span>
+                            </div>
+                        </div>
+                        <a href="#projects" class="arrow-btn" data-skill-project="3" aria-label="See Visualisation study project">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                        </a>
+                    </div>
+
+                    <div class="skill-item fade-in">
+                        <span class="skill-number">03</span>
+                        <div class="skill-details">
+                            <h3>Predictive Modelling & Forecasting</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Machine Learning</span>
+                                <span class="skill-tag">Time-series (Prophet)</span>
+                                <span class="skill-tag">Regression & Statistical Modelling</span>
+                            </div>
+                        </div>
+                        <a href="#projects" class="arrow-btn" data-skill-project="2" aria-label="See Traffic Prediction project">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="skills-info slide-in-right">
+                    <h2>Solving problems with the right <span class="accent">skills</span></h2>
+                    <p>I use a structured approach to analytics: understanding the business problem, preparing trustworthy data, uncovering meaningful insights, and recommending actions that drive better outcomes.</p>
+                    <a href="#projects" class="btn-secondary">See it in projects</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== CERTIFICATIONS ======================== -->
+    <section class="certifications" id="certifications">
+        <div class="container">
+            <h2 class="section-title fade-in">Professional <span class="accent">certifications</span></h2>
+
+            <div class="certs-grid">
+                <a href="https://credentials.databricks.com/44ca3855-66f1-483d-a76d-c1481d562a2a#acc.ixHgysTr" target="_blank" rel="noopener" class="cert-card fade-in">
+                    <div class="cert-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6C5CE7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                    </div>
+                    <div>
+                        <div class="cert-name">Generative AI Fundamentals</div>
+                        <div class="cert-issuer">Databricks</div>
+                    </div>
+                </a>
+
+                <a href="https://www.credly.com/badges/aaf00516-49d5-46ce-9373-19b0a5504ba8/email" target="_blank" rel="noopener" class="cert-card fade-in">
+                    <div class="cert-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6C5CE7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                    </div>
+                    <div>
+                        <div class="cert-name">Data Analytics Foundation</div>
+                        <div class="cert-issuer">HSBC</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== PROJECTS ======================== -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="projects-header fade-in">
+                <h2>Let's have a look at my <span class="accent">portfolio</span></h2>
+                <p>I seek to push the limits of creativity to create high-engaging, data-driven, and memorable analytical solutions.</p>
+            </div>
+
+            <div class="filter-tabs">
+                <button class="filter-tab active" data-filter="all">All</button>
+                <button class="filter-tab" data-filter="forecasting">Forecasting</button>
+                <button class="filter-tab" data-filter="machine-learning">Machine Learning</button>
+                <button class="filter-tab" data-filter="business-intelligence">Business Intelligence</button>
+                <button class="filter-tab" data-filter="research">Research</button>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card fade-in" data-category="business-intelligence forecasting" data-project="1">
+                    <div class="project-card-image">
+                        <img src="assets/images/project-1-retail.png" alt="Retail Sales Analytics & Forecasting — Power BI dashboard showing regional sales performance" loading="lazy">
+                    </div>
+                    <div class="project-card-body">
+                        <h3>Retail Sales Analytics & Forecasting</h3>
+                        <span class="project-card-category">Business Intelligence / Forecasting</span>
+                    </div>
+                    <div class="project-card-footer">
+                        <div class="project-tools">
+                            <span class="tool-badge small">SQL</span>
+                            <span class="tool-badge small">Python</span>
+                            <span class="tool-badge small">Power BI</span>
+                        </div>
+                        <button class="arrow-btn small" aria-label="View Retail Sales Analytics project details">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card fade-in" data-category="machine-learning" data-project="2">
+                    <div class="project-card-image">
+                        <img src="assets/images/project-2-traffic.png" alt="Road Traffic Accident Severity Prediction — Machine learning model performance metrics" loading="lazy">
+                    </div>
+                    <div class="project-card-body">
+                        <h3>Road Traffic Accident Severity Prediction</h3>
+                        <span class="project-card-category">Machine Learning</span>
+                    </div>
+                    <div class="project-card-footer">
+                        <div class="project-tools">
+                            <span class="tool-badge small">SAS</span>
+                            <span class="tool-badge small">ML</span>
+                            <span class="tool-badge small">NLP</span>
+                        </div>
+                        <button class="arrow-btn small" aria-label="View Road Traffic Accident project details">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card fade-in" data-category="research" data-project="3">
+                    <div class="project-card-image">
+                        <img src="assets/images/project-3-viz.png" alt="Impact of Statistical Visualisations on Decision-Making — Behavioural analytics study" loading="lazy">
+                    </div>
+                    <div class="project-card-body">
+                        <h3>Impact of Statistical Visualisations on Decision-Making</h3>
+                        <span class="project-card-category">Research / Behavioural Analytics</span>
+                    </div>
+                    <div class="project-card-footer">
+                        <div class="project-tools">
+                            <span class="tool-badge small">R</span>
+                            <span class="tool-badge small">MATLAB</span>
+                            <span class="tool-badge small">iMotions</span>
+                        </div>
+                        <button class="arrow-btn small" aria-label="View Visualisation study project details">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card fade-in" data-category="forecasting" data-project="4">
+                    <div class="project-card-image">
+                        <img src="assets/images/project-4-battery.png" alt="Battery Recycling Market Forecasting — European market analysis and ROI comparison" loading="lazy">
+                    </div>
+                    <div class="project-card-body">
+                        <h3>Battery Recycling Market Forecasting</h3>
+                        <span class="project-card-category">Forecasting / Market Analysis</span>
+                    </div>
+                    <div class="project-card-footer">
+                        <div class="project-tools">
+                            <span class="tool-badge small">Regression</span>
+                            <span class="tool-badge small">ROI</span>
+                        </div>
+                        <button class="arrow-btn small" aria-label="View Battery Recycling project details">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== PROJECT MODALS ======================== -->
+    <div class="modal-overlay" id="projectModal">
+        <div class="modal">
+            <button class="modal-close" aria-label="Close modal">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+            <div class="modal-content" id="modalContent">
+                <!-- Content injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden project detail content for modals -->
+    <div style="display:none">
+        <div class="project-detail" data-project="1">
+            <h2>Retail Sales Analytics & <span class="accent">Forecasting</span></h2>
+            <div class="modal-meta">
+                <span class="tag">Business Intelligence</span>
+                <span class="tag">Forecasting</span>
+                <span class="tag">SQL</span>
+                <span class="tag">Python</span>
+                <span class="tag">Power BI</span>
+                <span class="tag">Prophet</span>
+                <span class="tag">DAX</span>
+            </div>
+            <div class="modal-section">
+                <h3>Problem</h3>
+                <p>Diagnose sales performance and build reliable demand forecasting across four regional markets.</p>
+            </div>
+            <div class="modal-section">
+                <h3>Approach</h3>
+                <p>Executed end-to-end SQL diagnostics on 9,800+ retail transactions worth $2.26M across 4 regional markets, applying window functions and CTEs to identify a 32% sales collapse in the South region and low-AOV structural weaknesses in the Central market.</p>
+                <p>Built a three-page interactive Power BI dashboard with DAX measures, time intelligence modelling, and KPI tracking — enabling regional performance comparison and data-driven business recommendations.</p>
+                <p>Developed a Python Prophet forecasting model to automate demand planning.</p>
+            </div>
+            <div class="modal-result">
+                <h3>Result</h3>
+                <p><strong>Reduced weekly forecast error (MAPE) from ~250% to ~11%</strong>, identifying a 32% sales collapse in the South region and enabling automated demand planning.</p>
+            </div>
+            <a href="https://github.com/arpit-singh-uk" target="_blank" rel="noopener" class="btn-primary" style="margin-top:24px; display:inline-flex; align-items:center; gap:8px;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                View on GitHub
+            </a>
+        </div>
+
+        <div class="project-detail" data-project="2">
+            <h2>Road Traffic Accident Severity <span class="accent">Prediction</span></h2>
+            <div class="modal-meta">
+                <span class="tag">Machine Learning</span>
+                <span class="tag">SAS</span>
+                <span class="tag">NLP</span>
+                <span class="tag">Gradient Boosting</span>
+            </div>
+            <div class="modal-section">
+                <h3>Problem</h3>
+                <p>Predict accident severity and identify key drivers from UK road-traffic data.</p>
+            </div>
+            <div class="modal-section">
+                <h3>Approach</h3>
+                <p>Conducted end-to-end predictive analytics on 2,480 UK road traffic accident records across 35 variables using SAS for data preparation, visualisation, and modelling.</p>
+                <p>Applied SAS text analytics and topic modelling on 598 social media posts to generate insights on accident impact and public sentiment.</p>
+            </div>
+            <div class="modal-result">
+                <h3>Result</h3>
+                <p><strong>83.47% accuracy, 0.9172 AUC, and 0.6688 KS statistic</strong> — identified location and speed limit as leading severity drivers.</p>
+            </div>
+            <a href="mailto:arpitsinghbeniwal08@outlook.com" class="btn-primary" style="margin-top:24px; display:inline-flex; align-items:center; gap:8px;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                Request Full Report &amp; Code
+            </a>
+            <p class="project-disclaimer">Detailed report and supporting materials available upon request. Certain project artefacts are not publicly distributed due to academic copyright, confidentiality, intellectual property, and professional-use considerations.</p>
+        </div>
+
+        <div class="project-detail" data-project="3">
+            <h2>Impact of Statistical Visualisations on <span class="accent">Decision-Making</span></h2>
+            <div class="modal-meta">
+                <span class="tag">Research</span>
+                <span class="tag">Behavioural Analytics</span>
+                <span class="tag">R</span>
+                <span class="tag">MATLAB</span>
+                <span class="tag">SQL</span>
+                <span class="tag">iMotions</span>
+            </div>
+            <div class="modal-section">
+                <h3>Problem</h3>
+                <p>Measure how visualisation design affects decision accuracy and cognitive load.</p>
+            </div>
+            <div class="modal-section">
+                <h3>Approach</h3>
+                <p>Designed and executed a controlled behavioural analytics study across 113 participants using eye-tracking, pupil dilation analysis, and physiological sensors to measure how visualisation design affects decision accuracy and cognitive load.</p>
+                <p>Applied Wilcoxon testing and linear mixed-effects modelling in R across multimodal datasets combining response accuracy, fixation heatmaps, and biometric signals.</p>
+            </div>
+            <div class="modal-result">
+                <h3>Result</h3>
+                <p><strong>Redesigned violin plots improved interpretation accuracy from 61% to 70% (p=0.014)</strong> and cut response times by 14 seconds compared with traditional histograms.</p>
+            </div>
+            <a href="mailto:arpitsinghbeniwal08@outlook.com" class="btn-primary" style="margin-top:24px; display:inline-flex; align-items:center; gap:8px;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                Request Full Report &amp; Code
+            </a>
+            <p class="project-disclaimer">Detailed report and supporting materials available upon request. Certain project artefacts are not publicly distributed due to academic copyright, confidentiality, intellectual property, and professional-use considerations.</p>
+        </div>
+
+        <div class="project-detail" data-project="4">
+            <h2>Battery Recycling Market <span class="accent">Forecasting</span></h2>
+            <div class="modal-meta">
+                <span class="tag">Forecasting</span>
+                <span class="tag">Market Analysis</span>
+                <span class="tag">Fixed-effects Regression</span>
+                <span class="tag">ROI Analysis</span>
+            </div>
+            <div class="modal-section">
+                <h3>Problem</h3>
+                <p>Identify the stronger European market for battery-recycling investment.</p>
+            </div>
+            <div class="modal-section">
+                <h3>Approach</h3>
+                <p>Built a fixed-effects regression model forecasting battery recycling volumes through 2027 across 2 European markets, identifying the stronger investment market through ROI-based analysis across 10 regulatory and commercial variables.</p>
+                <p>Conducted end-to-end market analysis integrating EU regulatory frameworks, fleet age structure data, and recycling volume datasets across 2 markets to assess commercial viability and investment risk.</p>
+            </div>
+            <div class="modal-result">
+                <h3>Result</h3>
+                <p><strong>Delivered a market-entry strategy report covering 10 regulatory areas</strong> within a 4-month internship, directly supporting senior leadership decision-making on European market entry.</p>
+            </div>
+            <a href="mailto:arpitsinghbeniwal08@outlook.com" class="btn-primary" style="margin-top:24px; display:inline-flex; align-items:center; gap:8px;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                Request Full Report &amp; Code
+            </a>
+            <p class="project-disclaimer">Detailed report and supporting materials available upon request. Certain project artefacts are not publicly distributed due to academic copyright, confidentiality, intellectual property, and professional-use considerations.</p>
+        </div>
+    </div>
+
+    <!-- ======================== UCL CONSULTING SUMMIT ======================== -->
+    <section class="ucl-competition" id="ucl">
+        <div class="container">
+            <span class="section-label fade-in">BEYOND THE SPREADSHEET</span>
+            <h2 class="section-title-left fade-in">Cases, <span class="accent">stages</span> &amp; competitions</h2>
+
+            <div class="ucl-content">
+                <!-- Left: Text + Stats -->
+                <div class="ucl-text slide-in-left">
+                    <p>Representing the University of Surrey at the UK’s largest inter-university consulting competition — <strong>The Consulting Summit 2025</strong>, hosted by <strong>UCL Consulting Society</strong> in partnership with <strong>Oliver Wyman</strong>.</p>
+
+                    <p>Our case: <strong>“Revitalising Santander Cycles — sustaining and expanding market share in London’s competitive bike-sharing market.”</strong> Competing against 25 teams from across the UK, we built a data-driven market growth strategy and presented structured recommendations to a panel of industry judges, with mentorship from BCG and McKinsey &amp; Company.</p>
+
+                    <div class="ucl-stats">
+                        <div class="ucl-stat">
+                            <span class="ucl-stat-number">25</span>
+                            <span class="ucl-stat-label">TEAMS ACROSS THE UK</span>
+                        </div>
+                        <div class="ucl-stat">
+                            <span class="ucl-stat-number">1</span>
+                            <span class="ucl-stat-label">SURREY DELEGATION</span>
+                        </div>
+                        <div class="ucl-stat">
+                            <span class="ucl-stat-number">BCG · McKinsey</span>
+                            <span class="ucl-stat-label">INDUSTRY MENTORS</span>
+                        </div>
+                        <div class="ucl-stat">
+                            <span class="ucl-stat-number">Feb 2025</span>
+                            <span class="ucl-stat-label">UCL, LONDON</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Photo Grid -->
+                <div class="ucl-photos slide-in-right">
+                    <div class="ucl-photo-main">
+                        <img src="assets/images/ucl-presenting.jpeg" alt="Arpit Singh presenting a Comparative Plan Analysis at the UCL Consulting Summit 2025" loading="lazy">
+                        <span class="ucl-caption">Presenting the comparative plan analysis to industry judges</span>
+                    </div>
+                    <div class="ucl-photo-grid">
+                        <div class="ucl-photo-item">
+                            <img src="assets/images/ucl-venue.png" alt="The Consulting Summit 2025 venue at UCL" loading="lazy">
+                            <span class="ucl-caption">Inter-university case competition · UCL</span>
+                        </div>
+                        <div class="ucl-photo-item">
+                            <img src="assets/images/ucl-certificate.png" alt="UCL Consulting Summit 2025 — Participant Certificate" loading="lazy">
+                            <span class="ucl-caption">UCL Consulting Society × Oliver Wyman · Feb 2025</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== EXPERIENCE ======================== -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <h2 class="section-title fade-in">My professional <span class="accent">experience</span></h2>
+
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Mar 2026 – Present</span>
+                        <h3 class="timeline-title">Universal Banker — Wealth & Personal Banking</h3>
+                        <span class="timeline-company">HSBC UK · London</span>
+                        <p class="timeline-desc">Assess and resolve 2–3 fraud cases daily applying AML verification protocols in a regulated FCA environment. Support delivery of financial products within FCA Consumer Duty frameworks. Enrolled in HSBC University's Data & AI Academy.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Nov 2025 – Feb 2026</span>
+                        <h3 class="timeline-title">Research Analyst Intern</h3>
+                        <span class="timeline-company">ReviveBattery B.V · London</span>
+                        <p class="timeline-desc">Built fixed-effects regression models forecasting battery recycling volumes through 2027. Conducted end-to-end market analysis across EU regulatory frameworks. Delivered a market-entry strategy report covering 10 regulatory areas.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Sept 2024 – Sept 2025</span>
+                        <h3 class="timeline-title">MSc Business Analytics — Distinction</h3>
+                        <span class="timeline-company">University of Surrey · Guildford</span>
+                        <p class="timeline-desc">Activities: Surrey Consulting Society, University of Surrey Cricket Club.<br>Key Projects: Road Traffic Accident Severity Prediction & Text Analytics (SAS, Predictive Modelling); Rapid DNA Forensics Process Optimisation (Monte Carlo Simulation, Discrete Event Simulation & ROI Analysis).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+                
+    <!-- ======================== TESTIMONIAL ======================== -->
+    <section class="testimonial" id="reference">
+        <div class="container">
+            <span class="section-label fade-in">WHAT OTHERS SAY</span>
+            <h2 class="section-title fade-in">A word from my <span class="accent">supervisor</span></h2>
+
+            <div class="testimonial-card fade-in">
+                <!-- Yellow Accent Panel with Initials -->
+                <div class="testimonial-accent">
+                    <div class="testimonial-quote-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="rgba(22,22,22,0.2)" stroke="none"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
+                    </div>
+                    <div class="testimonial-initials">
+                        <span>AH</span>
+                    </div>
+                </div>
+
+                <!-- Quote Content -->
+                <div class="testimonial-body">
+                    <blockquote>
+                        <span class="quote-open">“</span>It was a pleasure to supervise Arpit for his dissertation project. He was dedicated and professional, and was very keen to learn everything he could. Arpit is clearly a very passionate and able analyst and I would happily recommend him!<span class="quote-close">”</span>
+                    </blockquote>
+
+                    <div class="testimonial-author">
+                        <h4>Dr Andy Hill</h4>
+                        <p>Senior Lecturer in Business Analytics · Surrey Business School, University of Surrey</p>
+                        <span class="testimonial-role">DISSERTATION SUPERVISOR · NOV 2025</span>
+                    </div>
+
+                    <div class="testimonial-actions">
+                        <a href="https://www.surrey.ac.uk/people/andy-hill" target="_blank" rel="noopener" class="btn-primary testimonial-btn">
+                            Surrey profile
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                        </a>
+                        <a href="mailto:a.a.hill@surrey.ac.uk" class="btn-outline testimonial-btn">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            a.a.hill@surrey.ac.uk
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== CONTACT ======================== -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-form slide-in-left">
+                    <form id="contactForm" action="https://formspree.io/f/xrevejkd" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="name" id="contactName" placeholder="Your name" required aria-label="Your name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" id="contactEmail" placeholder="Your email" required aria-label="Your email">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" id="contactMessage" placeholder="Tell me about the opportunity..." rows="5" required aria-label="Project details"></textarea>
+                        </div>
+                        <button type="submit" class="btn-secondary">Send Message</button>
+                    </form>
+                    <div class="form-success" id="formSuccess" style="display:none;">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        <h3>Message sent!</h3>
+                        <p>Thanks for reaching out. I'll get back to you shortly.</p>
+                    </div>
+                </div>
+
+                <div class="contact-info slide-in-right">
+                    <h2>Let's <span class="accent">talk</span> about your next Analyst hire</h2>
+                    <p>I'm actively looking for Business Analyst and Data Analyst opportunities where I can combine analytical skills with domain knowledge to drive measurable impact.</p>
+
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6C5CE7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            </div>
+                            <a href="mailto:arpitsinghbeniwal08@outlook.com">arpitsinghbeniwal08@outlook.com</a>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6C5CE7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            </div>
+                            <a href="tel:+447586196856">+44 7586 196856</a>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6C5CE7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </div>
+                            <span>London, United Kingdom</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== FOOTER ======================== -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <h2 class="footer-heading fade-in">Let's <span class="accent">connect</span> there</h2>
+
+            <div class="social-cards">
+                <a href="https://linkedin.com/in/arpit-singh-uk" target="_blank" rel="noopener" class="social-card fade-in">
+                    <div class="social-card-text">
+                        <h4>LinkedIn</h4>
+                        <p>Professional network profile</p>
+                    </div>
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="#0A66C2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </a>
+
+                <a href="https://github.com/arpit-singh-uk" target="_blank" rel="noopener" class="social-card fade-in">
+                    <div class="social-card-text">
+                        <h4>GitHub</h4>
+                        <p>Code & projects</p>
+                    </div>
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+
+                <a href="https://substack.com/@arpitsinghbeniwal" target="_blank" rel="noopener" class="social-card fade-in">
+                    <div class="social-card-text">
+                        <h4>Substack</h4>
+                        <p>The Analyst's Notebook</p>
+                    </div>
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="#FF6719"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
+                </a>
+
+                <a href="mailto:arpitsinghbeniwal08@outlook.com" class="social-card fade-in">
+                    <div class="social-card-text">
+                        <h4>Email</h4>
+                        <p>Direct enquiries</p>
+                    </div>
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6C5CE7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </a>
+            </div>
+
+            <div class="footer-bottom">
+                <a href="#hero" class="logo">
+                    <span class="logo-mark">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M8 2L14 14H2L8 2Z" fill="white"/>
+                        </svg>
+                    </span>
+                    <span>Arpit Singh</span>
+                </a>
+
+                <nav class="footer-nav">
+                    <a href="#hero">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#certifications">Certifications</a>
+                    <a href="#projects">Portfolio</a>
+                    <a href="#ucl">Beyond</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#reference">Reference</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+
+                <p class="copyright">&copy; 2026 Arpit Singh. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

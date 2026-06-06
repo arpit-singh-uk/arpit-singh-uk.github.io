@@ -1,0 +1,18 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+*.swp
+*.swo
+
+# Build artifacts
+pdr_pages/
+
+# PDFs (design docs, not site content)
+Changes to portfolio web design.pdf
+New Changes.pdf
+Final Change.docx
+PDR for Portfolio website.pdf
