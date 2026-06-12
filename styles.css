@@ -2567,6 +2567,27 @@ section {
 [data-theme='dark'] .logo span { color: #F0F0F5; }
 
 /* ============================================================
+   Cricket Grid
+   ============================================================ */
+.cricket-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px;
+  align-items: center;
+  margin-top: 64px;
+}
+
+@media (max-width: 768px) {
+  .cricket-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .cricket-grid > div:first-child { order: 2; }
+  .cricket-grid > div:nth-child(2) { order: 1; }
+  .cricket-grid > div:last-child  { order: 3; }
+}
+
+/* ============================================================
    Print Styles
    ============================================================ */
 @media print {
