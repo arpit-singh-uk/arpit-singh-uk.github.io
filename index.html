@@ -735,27 +735,17 @@
         <div class="container">
             <div class="contact-content">
                 <div class="contact-form slide-in-left">
-                    <div data-fs-success>
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                        <h3>Message sent!</h3>
-                        <p>Thanks for reaching out. I'll get back to you shortly.</p>
-                    </div>
-                    <div data-fs-error style="color:#ef4444; margin-bottom:12px; font-size:14px;"></div>
-
-                    <form id="contactForm">
+                    <form id="contactForm" action="https://formspree.io/f/xkoakqgz" method="POST">
                         <div class="form-group">
-                            <input type="text" name="name" id="contactName" placeholder="Your name" required aria-label="Your name" data-fs-field>
-                            <span data-fs-error="name" style="color:#ef4444; font-size:13px;"></span>
+                            <input type="text" name="name" id="contactName" placeholder="Your name" required aria-label="Your name">
                         </div>
                         <div class="form-group">
-                            <input type="email" name="email" id="contactEmail" placeholder="Your email" required aria-label="Your email" data-fs-field>
-                            <span data-fs-error="email" style="color:#ef4444; font-size:13px;"></span>
+                            <input type="email" name="email" id="contactEmail" placeholder="Your email" required aria-label="Your email">
                         </div>
                         <div class="form-group">
-                            <textarea name="message" id="contactMessage" placeholder="Tell me about the opportunity..." rows="5" required aria-label="Project details" data-fs-field></textarea>
-                            <span data-fs-error="message" style="color:#ef4444; font-size:13px;"></span>
+                            <textarea name="message" id="contactMessage" placeholder="Tell me about the opportunity..." rows="5" required aria-label="Project details"></textarea>
                         </div>
-                        <button type="submit" class="btn-secondary" data-fs-submit-btn>Send Message</button>
+                        <button type="submit" class="btn-secondary">Send Message</button>
                     </form>
                 </div>
 
@@ -857,10 +847,5 @@
 
     <!-- Scripts -->
     <script src="script.js"></script>
-    <script>
-        window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
-        formspree('initForm', { formElement: '#contactForm', formId: 'xkoakqgz' });
-    </script>
-    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </body>
 </html>

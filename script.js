@@ -542,7 +542,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!contactForm) return;
 
     const formParent = contactForm.parentNode;
-    const originalForm = contactForm.cloneNode(true);
 
     const successMessage = document.createElement('div');
     successMessage.className = 'form-success-message';
@@ -561,125 +560,9 @@ document.addEventListener('DOMContentLoaded', () => {
       successMessage.style.opacity = '0';
       successMessage.style.transform = 'scale(0.95)';
       successMessage.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
-
-      // Force reflow
       void successMessage.offsetHeight;
       successMessage.style.opacity = '1';
       successMessage.style.transform = 'scale(1)';
-
-      // After 4 seconds, restore the form
-      setTimeout(() => {
-        successMessage.style.opacity = '0';
-        successMessage.style.transform = 'scale(0.95)';
-
-        setTimeout(() => {
-          formParent.replaceChild(originalForm, successMessage);
-          originalForm.style.opacity = '0';
-          originalForm.style.transform = 'scale(0.95)';
-          originalForm.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
-
-          void originalForm.offsetHeight;
-          originalForm.style.opacity = '1';
-          originalForm.style.transform = 'scale(1)';
-
-          // Re-initialise form handler on the restored form
-          initContactFormOnElement(originalForm);
-        }, 400);
-      }, 4000);
-    }, 300);
-  }
-
-  /** Re-attach submit handler after the form DOM node has been replaced. */
-  function initContactFormOnElement(form) {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-
-      const nameInput  = form.querySelector('[name="name"], #name');
-      const emailInput = form.querySelector('[name="email"], #email');
-
-      const name  = nameInput  ? nameInput.value.trim()  : '';
-      const email = emailInput ? emailInput.value.trim() : '';
-
-      if (!name) {
-        showFormErrorOnElement(form, nameInput, 'Please enter your name.');
-        return;
-      }
-      if (!email) {
-        showFormErrorOnElement(form, emailInput, 'Please enter your email.');
-        return;
-      }
-      if (!isValidEmail(email)) {
-        showFormErrorOnElement(form, emailInput, 'Please enter a valid email address.');
-        return;
-      }
-
-      showFormSuccessOnElement(form);
-    });
-  }
-
-  function showFormErrorOnElement(form, input, message) {
-    form.querySelectorAll('.form-error-message').forEach(el => el.remove());
-    form.querySelectorAll('.input-error').forEach(el => el.classList.remove('input-error'));
-
-    if (input) {
-      input.classList.add('input-error');
-      const errorEl = document.createElement('span');
-      errorEl.className = 'form-error-message';
-      errorEl.textContent = message;
-      input.parentNode.insertBefore(errorEl, input.nextSibling);
-      input.focus();
-
-      input.addEventListener('input', function handler() {
-        input.classList.remove('input-error');
-        if (errorEl.parentNode) errorEl.parentNode.removeChild(errorEl);
-        input.removeEventListener('input', handler);
-      });
-    }
-  }
-
-  function showFormSuccessOnElement(form) {
-    const formParent = form.parentNode;
-    const originalForm = form.cloneNode(true);
-
-    const successMessage = document.createElement('div');
-    successMessage.className = 'form-success-message';
-    successMessage.innerHTML = `
-      <div class="success-icon">✓</div>
-      <h3>Message Sent!</h3>
-      <p>Thank you for reaching out. I'll get back to you soon.</p>
-    `;
-
-    form.style.opacity = '0';
-    form.style.transform = 'scale(0.95)';
-    form.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
-
-    setTimeout(() => {
-      formParent.replaceChild(successMessage, form);
-      successMessage.style.opacity = '0';
-      successMessage.style.transform = 'scale(0.95)';
-      successMessage.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
-
-      void successMessage.offsetHeight;
-      successMessage.style.opacity = '1';
-      successMessage.style.transform = 'scale(1)';
-
-      setTimeout(() => {
-        successMessage.style.opacity = '0';
-        successMessage.style.transform = 'scale(0.95)';
-
-        setTimeout(() => {
-          formParent.replaceChild(originalForm, successMessage);
-          originalForm.style.opacity = '0';
-          originalForm.style.transform = 'scale(0.95)';
-          originalForm.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
-
-          void originalForm.offsetHeight;
-          originalForm.style.opacity = '1';
-          originalForm.style.transform = 'scale(1)';
-
-          initContactFormOnElement(originalForm);
-        }, 400);
-      }, 4000);
     }, 300);
   }
 
