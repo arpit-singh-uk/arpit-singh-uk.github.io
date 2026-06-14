@@ -461,7 +461,7 @@
                 <h3>Result</h3>
                 <p><strong>83.47% accuracy, 0.9172 AUC, and 0.6688 KS statistic</strong> — identified location and speed limit as leading severity drivers.</p>
             </div>
-            <a href="mailto:arpitsingh0811@outlook.com" class="btn-primary" style="margin-top:24px; display:inline-flex; align-items:center; gap:8px;">
+            <a href="mailto:arpitsingh.uk0811@gmail.com" class="btn-primary" style="margin-top:24px; display:inline-flex; align-items:center; gap:8px;">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                 Request Full Report &amp; Code
             </a>
@@ -491,7 +491,7 @@
                 <h3>Result</h3>
                 <p><strong>Redesigned violin plots improved interpretation accuracy from 61% to 70% (p=0.014)</strong> and cut response times by 14 seconds compared with traditional histograms.</p>
             </div>
-            <a href="mailto:arpitsingh0811@outlook.com" class="btn-primary" style="margin-top:24px; display:inline-flex; align-items:center; gap:8px;">
+            <a href="mailto:arpitsingh.uk0811@gmail.com" class="btn-primary" style="margin-top:24px; display:inline-flex; align-items:center; gap:8px;">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                 Request Full Report &amp; Code
             </a>
@@ -522,7 +522,7 @@
                 <h3>Result</h3>
                 <p><strong>652 at-risk customers identified · 12-month revenue forecast at 0.73% MAPE · 14.33x CLV-to-CAC ratio</strong> — delivering actionable retention strategy and £1.6M annual revenue at risk quantified through RFM segmentation.</p>
             </div>
-            <a href="mailto:arpitsingh0811@outlook.com" class="btn-primary" style="margin-top:24px; display:inline-flex; align-items:center; gap:8px;">
+            <a href="mailto:arpitsingh.uk0811@gmail.com" class="btn-primary" style="margin-top:24px; display:inline-flex; align-items:center; gap:8px;">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                 Request Full Report &amp; Code
             </a>
@@ -735,23 +735,28 @@
         <div class="container">
             <div class="contact-content">
                 <div class="contact-form slide-in-left">
-                    <form id="contactForm" action="https://formspree.io/f/xrevejkd" method="POST">
-                        <div class="form-group">
-                            <input type="text" name="name" id="contactName" placeholder="Your name" required aria-label="Your name">
-                        </div>
-                        <div class="form-group">
-                            <input type="email" name="email" id="contactEmail" placeholder="Your email" required aria-label="Your email">
-                        </div>
-                        <div class="form-group">
-                            <textarea name="message" id="contactMessage" placeholder="Tell me about the opportunity..." rows="5" required aria-label="Project details"></textarea>
-                        </div>
-                        <button type="submit" class="btn-secondary">Send Message</button>
-                    </form>
-                    <div class="form-success" id="formSuccess" style="display:none;">
+                    <div data-fs-success>
                         <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                         <h3>Message sent!</h3>
                         <p>Thanks for reaching out. I'll get back to you shortly.</p>
                     </div>
+                    <div data-fs-error style="color:#ef4444; margin-bottom:12px; font-size:14px;"></div>
+
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" name="name" id="contactName" placeholder="Your name" required aria-label="Your name" data-fs-field>
+                            <span data-fs-error="name" style="color:#ef4444; font-size:13px;"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" id="contactEmail" placeholder="Your email" required aria-label="Your email" data-fs-field>
+                            <span data-fs-error="email" style="color:#ef4444; font-size:13px;"></span>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" id="contactMessage" placeholder="Tell me about the opportunity..." rows="5" required aria-label="Project details" data-fs-field></textarea>
+                            <span data-fs-error="message" style="color:#ef4444; font-size:13px;"></span>
+                        </div>
+                        <button type="submit" class="btn-secondary" data-fs-submit-btn>Send Message</button>
+                    </form>
                 </div>
 
                 <div class="contact-info slide-in-right">
@@ -763,7 +768,7 @@
                             <div class="contact-detail-icon">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6C5CE7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                             </div>
-                            <a href="mailto:arpitsingh0811@outlook.com">arpitsingh0811@outlook.com</a>
+                            <a href="mailto:arpitsingh.uk0811@gmail.com">arpitsingh.uk0811@gmail.com</a>
                         </div>
                         <div class="contact-detail">
                             <div class="contact-detail-icon">
@@ -814,7 +819,7 @@
                     <svg width="28" height="28" viewBox="0 0 24 24" fill="#FF6719"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
                 </a>
 
-                <a href="mailto:arpitsingh0811@outlook.com" class="social-card fade-in">
+                <a href="mailto:arpitsingh.uk0811@gmail.com" class="social-card fade-in">
                     <div class="social-card-text">
                         <h4>Email</h4>
                         <p>Direct enquiries</p>
@@ -852,5 +857,10 @@
 
     <!-- Scripts -->
     <script src="script.js"></script>
+    <script>
+        window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+        formspree('initForm', { formElement: '#contactForm', formId: 'xkoakqgz' });
+    </script>
+    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </body>
 </html>
