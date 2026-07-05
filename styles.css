@@ -671,6 +671,26 @@ section {
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-credibility .chip:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-md);
+}
+
+.chip-arrow {
+  display: inline-block;
+  font-size: 14px;
+  color: #6C5CE7;
+  margin-left: 2px;
+  animation: arrowBounce 2s ease-in-out infinite;
+}
+
+@keyframes arrowBounce {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(3px, -3px); }
 }
 
 .hero-visual {
