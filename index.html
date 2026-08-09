@@ -131,12 +131,12 @@
         <div class="container">
             <div class="stats-grid">
                 <div class="stat-item fade-in">
-                    <div class="stat-number" data-target="5000" data-suffix="+">0</div>
+                    <div class="stat-number" data-target="1200" data-suffix="+">0</div>
                     <div class="stat-label">Banking customers analysed</div>
                 </div>
                 <div class="stat-item fade-in">
-                    <div class="stat-number" data-target="28.5" data-prefix="£" data-suffix="M" data-decimal="true">0</div>
-                    <div class="stat-label">Revenue data modelled</div>
+                    <div class="stat-number" data-target="51" data-suffix="k+">0</div>
+                    <div class="stat-label">Banking transactions modelled</div>
                 </div>
                 <div class="stat-item fade-in">
                     <div class="stat-number" data-target="83.47" data-suffix="%" data-decimal="true">0</div>
@@ -309,7 +309,28 @@
             </div>
 
             <div class="projects-grid">
-                <!-- Project 1 -->
+                <!-- Project 4 (Financial — shown first) -->
+                <div class="project-card fade-in" data-category="machine-learning forecasting" data-project="4">
+                    <div class="project-card-image">
+                        <img src="assets/images/project-4-finops.png" alt="Financial Analytics: UK Retail Banking — Revenue forecasting, credit risk and churn models on synthetic banking data" loading="lazy">
+                    </div>
+                    <div class="project-card-body">
+                        <h3>Financial Analytics: UK Retail Banking</h3>
+                        <span class="project-card-category">Machine Learning / SQL</span>
+                    </div>
+                    <div class="project-card-footer">
+                        <div class="project-tools">
+                            <span class="tool-badge small">MySQL</span>
+                            <span class="tool-badge small">Python</span>
+                            <span class="tool-badge small">Streamlit</span>
+                        </div>
+                        <button class="arrow-btn small" aria-label="View Financial Analytics: UK Retail Banking project details">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 1 (Retail — shown second) -->
                 <div class="project-card fade-in" data-category="business-intelligence forecasting" data-project="1">
                     <div class="project-card-image">
                         <img src="assets/images/project-1-retail.png" alt="Retail Sales Analytics & Forecasting — Power BI dashboard showing regional sales performance" loading="lazy">
@@ -371,27 +392,6 @@
                         </button>
                     </div>
                 </div>
-
-                <!-- Project 4 -->
-                <div class="project-card fade-in" data-category="machine-learning forecasting" data-project="4">
-                    <div class="project-card-image">
-                        <img src="assets/images/project-4-finops.png" alt="Financial Operations Analytics — Churn prediction, revenue forecasting and RFM segmentation on banking data" loading="lazy">
-                    </div>
-                    <div class="project-card-body">
-                        <h3>Financial Operations Analytics</h3>
-                        <span class="project-card-category">Machine Learning / Forecasting</span>
-                    </div>
-                    <div class="project-card-footer">
-                        <div class="project-tools">
-                            <span class="tool-badge small">Python</span>
-                            <span class="tool-badge small">Scikit-learn</span>
-                            <span class="tool-badge small">Prophet</span>
-                        </div>
-                        <button class="arrow-btn small" aria-label="View Financial Operations Analytics project details">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-                        </button>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -435,7 +435,7 @@
                 <h3>Result</h3>
                 <p><strong>Reduced weekly forecast error (MAPE) from ~250% to ~11%</strong>, identifying a 32% sales collapse in the South region and enabling automated demand planning.</p>
             </div>
-            <a href="https://github.com/arpit-singh-uk" target="_blank" rel="noopener" class="btn-primary" style="margin-top:24px; display:inline-flex; align-items:center; gap:8px;">
+            <a href="https://github.com/arpit-singh-uk/retail-sales-analytics" target="_blank" rel="noopener" class="btn-primary" style="margin-top:24px; display:inline-flex; align-items:center; gap:8px;">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                 View on GitHub
             </a>
@@ -500,34 +500,38 @@
         </div>
 
         <div class="project-detail" data-project="4">
-            <h2>Financial Operations <span class="accent">Analytics</span></h2>
+            <h2>Financial Analytics: UK Retail <span class="accent">Banking</span></h2>
             <div class="modal-meta">
                 <span class="tag">Machine Learning</span>
+                <span class="tag">SQL</span>
                 <span class="tag">Forecasting</span>
                 <span class="tag">Python</span>
+                <span class="tag">MySQL</span>
                 <span class="tag">Scikit-learn</span>
                 <span class="tag">Prophet</span>
-                <span class="tag">Statsmodels</span>
+                <span class="tag">Streamlit</span>
             </div>
             <div class="modal-section">
                 <h3>Problem</h3>
-                <p>Build an end-to-end analytics solution on 5,000 banking customers and £28.5M revenue data to support churn reduction, revenue planning, and customer segmentation.</p>
+                <p>Build an end-to-end analytics solution on synthetic UK retail banking data — 1,200 customers, 2,597 accounts, ~51k transactions — covering three linked problems: revenue forecasting, credit risk assessment, and customer churn prediction. Synthetic data was chosen deliberately: real customer banking data is largely locked behind GDPR and internal governance, making synthetic generation one of the practical workarounds the industry is investing in.</p>
             </div>
             <div class="modal-section">
                 <h3>Approach</h3>
-                <p>Built a churn prediction model across 5,000 customers identifying 652 at-risk customers, with recency and transaction frequency as dominant predictors and outputs translated into an executive dashboard.</p>
-                <p>Developed an ARIMA revenue forecasting model on 5 years of synthetic banking data aligned to FCA reporting conventions, projecting 12-month revenue at 0.73% MAPE and detecting Q4 seasonal peaks to support capacity and resource planning.</p>
-                <p>Delivered RFM segmentation across 8 customer groups and CLV analysis revealing a 14.33x CLV-to-CAC ratio and 5-month average customer payback period, informing targeted retention strategy across 4,344 active accounts.</p>
+                <p><strong>Revenue forecasting:</strong> Seasonal decomposition on a 5-year revenue series with UK banking seasonality (New Year, April tax year, September) built into the generator. Ran a Prophet vs SARIMA backtest — Prophet won after packaged account penetration was corrected from 80% to ~22% (in line with Mintel's real UK figures), which flipped the result from the first run.</p>
+                <p><strong>Credit risk:</strong> Logistic regression and random forest using utilisation, missed payments, and affordability ratios built from actual transaction history — not raw income. Default rate for employed customers under £15k is 11.5%, dropping across income bands as a real gradient, not a cutoff. Debt-to-income and payment-to-income ratios add signal within the same income band.</p>
+                <p><strong>Churn:</strong> Credit stress (max utilisation, missed payments) used as a churn feature alongside tenure, engagement (RFM), and plan tier — linking retention and lending risk rather than treating them as separate numbers. RFM scored via SQL window functions across five cleaned tables in MySQL.</p>
             </div>
             <div class="modal-result">
                 <h3>Result</h3>
-                <p><strong>652 at-risk customers identified · 12-month revenue forecast at 0.73% MAPE · 14.33x CLV-to-CAC ratio</strong> — delivering actionable retention strategy and £1.6M annual revenue at risk quantified through RFM segmentation.</p>
+                <p><strong>Prophet outperforms SARIMA on the backtest · income alone is a weak credit signal · credit stress moves churn prediction</strong> — with a live Streamlit app across five tabs: revenue forecast, RFM segmentation, credit risk scorer, churn scorer, and a data-cleaning audit querying staging vs clean tables live.</p>
             </div>
-            <a href="mailto:arpitsingh.uk0811@gmail.com" class="btn-primary" style="margin-top:24px; display:inline-flex; align-items:center; gap:8px;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                Request Full Report &amp; Code
-            </a>
-            <p class="project-disclaimer">Detailed report and supporting materials available upon request. Certain project artefacts are not publicly distributed due to academic copyright, confidentiality, intellectual property, and professional-use considerations.</p>
+            <div style="display:flex; gap:12px; margin-top:24px; flex-wrap:wrap;">
+                <a href="https://github.com/arpit-singh-uk/financial-analytics-uk-banking" target="_blank" rel="noopener" class="btn-primary" style="display:inline-flex; align-items:center; gap:8px;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    View on GitHub
+                </a>
+            </div>
+            <p class="project-disclaimer" style="margin-top:16px;">Synthetic data only — no real customer data involved. Built to mirror FCA-adjacent analytical workflows.</p>
         </div>
     </div>
 
