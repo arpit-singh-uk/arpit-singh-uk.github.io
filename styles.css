@@ -182,14 +182,40 @@ h3 {
 }
 
 .highlight-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: var(--radius-full);
-  background: rgba(108, 92, 231, 0.1);
+  width: 32px;
+  height: 32px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-bottom: 16px;
+  justify-content: flex-start;
+  margin-bottom: 12px;
+}
+
+.highlight-icon img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.highlight-badge-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.academy-badge-img {
+  height: 52px;
+  width: auto;
+  border-radius: 6px;
+  object-fit: contain;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.academy-badge-img:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
 .highlight-card h3 {
@@ -1307,6 +1333,37 @@ section {
   margin-bottom: 12px;
 }
 
+.timeline-company-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-grey);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.timeline-company-link:hover {
+  color: var(--primary-purple);
+}
+
+.company-logo-img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.ext-link-icon {
+  opacity: 0.6;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.timeline-company-link:hover .ext-link-icon {
+  opacity: 1;
+  transform: translate(2px, -2px);
+}
+
 .timeline-desc {
   font-size: 14px;
   color: var(--text-grey);
@@ -1659,6 +1716,18 @@ section {
   flex-shrink: 0;
   color: var(--primary-purple);
   font-size: 22px;
+}
+
+.cert-badge-img {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+}
+
+.cert-badge-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .cert-info {
