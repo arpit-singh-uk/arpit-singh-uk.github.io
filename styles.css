@@ -1525,6 +1525,55 @@ section {
   right: 0;
 }
 
+/* --- Recommended Bookshelf Horizontal Row --- */
+.books-horizontal-row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+  width: 100%;
+}
+
+.book-cover-item {
+  width: 180px;
+  height: 260px;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  transition: var(--transition);
+  background: transparent;
+  flex-shrink: 0;
+}
+
+.book-cover-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2);
+}
+
+.book-cover-item img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+@media (max-width: 768px) {
+  .book-cover-item {
+    width: 150px;
+    height: 216px;
+  }
+}
+
+@media (max-width: 480px) {
+  .book-cover-item {
+    width: calc((100% - 16px) / 2);
+    height: 230px;
+  }
+}
+
 /* ============================================================
    TESTIMONIAL / REFERENCE SECTION
    ============================================================ */
