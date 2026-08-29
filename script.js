@@ -347,11 +347,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let hasAnimated = false;
 
-    // Set initial display to show "0" with proper formatting
+    // Set initial display to show starting value with proper formatting
     statNumbers.forEach(el => {
+      if (!el.hasAttribute('data-target')) return;
+      const startVal = el.hasAttribute('data-start') ? parseFloat(el.getAttribute('data-start')) : 0;
       const prefix = el.getAttribute('data-prefix') || '';
       const suffix = el.getAttribute('data-suffix') || '';
-      el.textContent = `${prefix}0${suffix}`;
+      const isDecimal = el.getAttribute('data-decimal') === 'true';
+      const formatted = isDecimal ? startVal.toFixed(2) : Math.round(startVal).toLocaleString();
+      el.textContent = `${prefix}${formatted}${suffix}`;
     });
 
     const observerOptions = {
@@ -375,18 +379,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function animateAllCounters() {
     statNumbers.forEach((el, index) => {
+      if (!el.hasAttribute('data-target')) return;
       const target = parseFloat(el.getAttribute('data-target')) || 0;
+      const startVal = el.hasAttribute('data-start') ? parseFloat(el.getAttribute('data-start')) : 0;
       const prefix = el.getAttribute('data-prefix') || '';
       const suffix = el.getAttribute('data-suffix') || '';
       const isDecimal = el.getAttribute('data-decimal') === 'true';
       // Stagger each counter by 150ms
       setTimeout(() => {
-        animateCounter(el, target, prefix, suffix, isDecimal);
+        animateCounter(el, target, startVal, prefix, suffix, isDecimal);
       }, index * 150);
     });
   }
 
-  function animateCounter(el, target, prefix, suffix, isDecimal) {
+  function animateCounter(el, target, startVal, prefix, suffix, isDecimal) {
     const duration = 2200;
     const scrambleDuration = 400; // initial scramble phase
     let startTime = null;
@@ -414,8 +420,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const elapsed = timestamp - startTime;
 
       if (elapsed < scrambleDuration) {
-        // Scramble phase: show rapid random numbers
-        const randomFactor = Math.random() * target * 0.5;
+        // Scramble phase: show rapid random numbers from startVal up
+        const randomFactor = startVal + Math.random() * (target - startVal) * 0.5;
         el.textContent = formatNumber(randomFactor);
         requestAnimationFrame(step);
       } else {
@@ -424,7 +430,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const countDuration = duration - scrambleDuration;
         const progress = Math.min(countElapsed / countDuration, 1);
         const easedProgress = easeOutExpo(progress);
-        const currentValue = easedProgress * target;
+        const currentValue = startVal + easedProgress * (target - startVal);
 
         el.textContent = formatNumber(currentValue);
 
