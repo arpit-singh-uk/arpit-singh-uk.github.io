@@ -1687,14 +1687,6 @@ section {
   width: 100%;
 }
 
-.certs-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-  width: 100%;
-}
-
 .certs-row.top-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1705,6 +1697,7 @@ section {
 .certs-row.bottom-row {
   display: flex;
   justify-content: center;
+  gap: 16px;
   width: 100%;
 }
 
@@ -1738,6 +1731,8 @@ section {
   width: 48px;
   height: 48px;
   flex-shrink: 0;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .cert-badge-img img {
