@@ -1186,6 +1186,22 @@ section {
   font-size: 15px;
 }
 
+.key-outcomes-box {
+  background: var(--bg-cream);
+  padding: 16px 20px;
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--primary-purple);
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+.key-outcomes-box p {
+  color: var(--ink-black);
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+}
+
 .modal-result {
   background: var(--bg-cream);
   padding: 20px 24px;
