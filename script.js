@@ -129,15 +129,8 @@ document.addEventListener('DOMContentLoaded', () => {
      4. ACTIVE NAV LINK HIGHLIGHTING
   ---------------------------------------------------------- */
   function initActiveNavHighlight() {
-    const sectionIds = ['hero', 'about', 'skills', 'projects', 'contact'];
-    const observedSections = [];
-
-    sectionIds.forEach(id => {
-      const el = document.getElementById(id);
-      if (el) observedSections.push(el);
-    });
-
-    if (observedSections.length === 0) return;
+    const sections = Array.from(document.querySelectorAll('section[id]'));
+    if (sections.length === 0) return;
 
     function setActiveLink(id) {
       navLinks.forEach(link => {
@@ -150,21 +143,27 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    const observerOptions = {
-      root: null,
-      rootMargin: `-${HEADER_OFFSET}px 0px -40% 0px`,
-      threshold: 0.3
-    };
+    function onScroll() {
+      const scrollPos = window.pageYOffset + HEADER_OFFSET + 100;
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          setActiveLink(entry.target.id);
+      // Bottom of page check
+      if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight - 50) {
+        const lastSec = sections[sections.length - 1];
+        if (lastSec) setActiveLink(lastSec.id);
+        return;
+      }
+
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const sec = sections[i];
+        if (scrollPos >= sec.offsetTop) {
+          setActiveLink(sec.id);
+          break;
         }
-      });
-    }, observerOptions);
+      }
+    }
 
-    observedSections.forEach(section => observer.observe(section));
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
   }
 
   /* ----------------------------------------------------------
