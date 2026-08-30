@@ -753,6 +753,70 @@ section {
   border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
 }
 
+/* Floating DataCamp Certified Badge */
+.hero-floating-badge {
+  position: absolute;
+  bottom: 40px;
+  left: -42px;
+  background: var(--surface-white);
+  padding: 10px 16px 10px 12px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.14);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 10;
+  text-decoration: none;
+  color: var(--ink-black);
+  border: 1px solid rgba(108, 92, 231, 0.25);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+  animation: badgeFloat 4s ease-in-out infinite;
+}
+
+.hero-floating-badge:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 16px 36px rgba(108, 92, 231, 0.28);
+}
+
+.hero-floating-badge img {
+  width: 42px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.hero-floating-badge-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-floating-badge-title {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--ink-black);
+  line-height: 1.25;
+}
+
+.hero-floating-badge-sub {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--primary-purple);
+  margin-top: 2px;
+}
+
+@keyframes badgeFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@media (max-width: 992px) {
+  .hero-floating-badge {
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
 /* ============================================================
    SECTION 3 — Stats Band
    ============================================================ */
@@ -1753,23 +1817,12 @@ section {
   width: 100%;
 }
 
-.certs-row.top-row {
+.certs-row.top-row,
+.certs-row.bottom-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
   width: 100%;
-}
-
-.certs-row.bottom-row {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  width: 100%;
-}
-
-.certs-row.bottom-row .cert-card {
-  width: calc((100% - 32px) / 3);
-  max-width: 360px;
 }
 
 .cert-card {
@@ -1805,6 +1858,9 @@ section {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  image-rendering: -webkit-optimize-contrast;
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
 
 .cert-info {
